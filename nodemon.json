@@ -1,0 +1,6 @@
+{
+  "watch": ["dist", "package.json", ".env"],
+  "ext": "js,ts,json",
+  "ignore": ["src/**/*.test.ts"],
+  "exec": "serverless offline --stage dev"
+}
