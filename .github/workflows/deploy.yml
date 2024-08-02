@@ -22,13 +22,13 @@ jobs:
         run: |
           npm install -g serverless  # Install Serverless Framework globally
           npm install  # Install project dependencies
-          
+
       - name: serverless deploy
         uses: serverless/github-action@v3.2
         with:
-        args: deploy
+          args: deploy
         env:
-        SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # AWS access key ID
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # AWS secret access key
-        AWS_REGION: ${{ secrets.AWS_REGION }} # AWS region, e.g., us-east-1
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # AWS access key ID
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # AWS secret access key
+          AWS_REGION: ${{ secrets.AWS_REGION }} # AWS region, e.g., us-east-1
