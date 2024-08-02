@@ -22,7 +22,6 @@ functions:
           method: any
 package:
   exclude:
-    - src/**
     - .git/**
     - README.md
     - .env
