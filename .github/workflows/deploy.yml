@@ -22,6 +22,11 @@ jobs:
         run: |
           npm install -g serverless  # Install Serverless Framework globally
           npm install  # Install project dependencies
+      - name: Configure Serverless Framework
+        run: |
+          serverless login
+        env:
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
 
       - name: Deploy to AWS
         env:
