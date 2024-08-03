@@ -27,5 +27,5 @@ model Blog{
   title String
   autherId Int
   author Users @relation(fields: [autherId], references: [id])
-
+  published Boolean @default(false)
 }
